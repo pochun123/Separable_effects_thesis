@@ -2,7 +2,7 @@
 % Please edit documentation in R/SEP_cp.R
 \name{SepE}
 \alias{SepE}
-\title{Estimate Separable Direct and Indirect Effects in Competing Risks}
+\title{An Unsupervised Adaptive Approach for Causal Inference in Competing Risks Data Using Separable Effects}
 \usage{
 SepE(
   data,
@@ -25,7 +25,6 @@ SepE(
   \item \code{X}: Observation time
   \item \code{D}: Censoring indicator (1 = event, 0 = censored)
   \item \code{K}: Competing risk indicator (1 = T1 event, 0 = T2 event)
-  \item \code{A}: Left truncation time
   \item \code{Z}: Exposure and confounders (exposure should be the first column)
 }}
 
@@ -48,12 +47,24 @@ SepE(
 \item{con}{A character string to specify confounder adjustment method: \code{"user"}, \code{"median"}, or \code{"mean"}. Default is \code{"median"}.}
 
 \item{level}{A numeric vector specifying specific levels for confounder adjustment. Default is \code{NULL}.}
-
-\item{type}{A character string indicating censoring or truncation type: \code{"right"} for right censoring, \code{"left"} for left truncation. Default is \code{"right"}.}
 }
 \value{
-A list containing estimated separable effects and model information.
+A list containing the following components:
+\describe{
+  \item{r1}{Selected transformation tuning parameter for T1}
+  \item{r2}{Selected transformation tuning parameter for T2}
+  \item{coef.B1}{Estimated coefficients for T1}
+  \item{coef.B2}{Estimated coefficients for T2}
+  \item{base.R1}{Estimated baseline function for T1}
+  \item{base.R2}{Estimated baseline function for T2}
+  \item{DE}{Estimated separable direct effects}
+  \item{IE}{Estimated separable indirect effects}
+  \item{DE.sd}{Standard deviation of \code{DE}}
+  \item{IE.sd}{Standard deviation of \code{IE}}
+  \item{LG1}{Log-likelihood curve for T1 across the specified range of transformation tuning parameter}
+  \item{LG2}{Log-likelihood curve for T2 across the specified range of transformation tuning parameter}
+}
 }
 \description{
-This function estimates separable direct and indirect effects under competing risks settings using a generalized transformation model, including logarithmic transformation (LT) and Box-Cox transformation (BCT).
+This package implements the methods proposed in the paper "An Unsupervised Adaptive Approach for Causal Inference in Competing Risks Data Using Separable Effects". It provides a semiparametric maximum likelihood estimator (SPMLE) under a full-likelihood and separable effects framework, and includes an unsupervised, AIC-based model selection procedure for semiparametric transformation models—specifically, generalized logarithmic and Box-Cox transformations—under competing risks settings.
 }
