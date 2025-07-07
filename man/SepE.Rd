@@ -49,20 +49,20 @@ SepE(
 \item{level}{A numeric vector specifying specific levels for confounder adjustment. Default is \code{NULL}.}
 }
 \value{
-A list containing the following components:
-\describe{
-  \item{r1}{Selected transformation tuning parameter for T1}
-  \item{r2}{Selected transformation tuning parameter for T2}
-  \item{coef.B1}{Estimated coefficients for T1}
-  \item{coef.B2}{Estimated coefficients for T2}
-  \item{base.R1}{Estimated baseline function for T1}
-  \item{base.R2}{Estimated baseline function for T2}
-  \item{DE}{Estimated separable direct effects}
-  \item{IE}{Estimated separable indirect effects}
-  \item{DE.sd}{Standard deviation of \code{DE}}
-  \item{IE.sd}{Standard deviation of \code{IE}}
-  \item{LG1}{Log-likelihood curve for T1 across the specified range of transformation tuning parameter}
-  \item{LG2}{Log-likelihood curve for T2 across the specified range of transformation tuning parameter}
+An object of class "SepE" containing the following components:
+\itemize{
+  \item \code{r1}: Selected transformation tuning parameter for T1.
+  \item \code{r2}: Selected transformation tuning parameter for T2.
+  \item \code{coef.B1}: Estimated coefficients for T1.
+  \item \code{coef.B2}: Estimated coefficients for T2.
+  \item \code{base.R1}: Estimated baseline function for T1.
+  \item \code{base.R2}: Estimated baseline function for T2.
+  \item \code{DE}: Estimated separable direct effects.
+  \item \code{IE}: Estimated separable indirect effects.
+  \item \code{DE.sd}: Standard deviation of \code{DE}.
+  \item \code{IE.sd}: Standard deviation of \code{IE}.
+  \item \code{LG1}: Log-likelihood curve for T1 across the specified range of transformation tuning parameter.
+  \item \code{LG2}: Log-likelihood curve for T2 across the specified range of transformation tuning parameter.
 }
 }
 \description{
