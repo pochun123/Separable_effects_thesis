@@ -5,10 +5,10 @@
 #' @param tt A numeric vector of time points at which the user is interested in calculating the effects, e.g., \code{c(12, 24, 36)}.
 #' @param B1 Initial value for beta1. Numeric vector. Default is estimated from \code{coxph()}.
 #' @param B2 Initial value for beta2. Numeric vector. Default is estimated from \code{coxph()}.
-#' @param r1 Transformation class parameter for event time T1. Numeric. Default is chosen by model selection.
-#' @param r2 Transformation class parameter for event time T2. Numeric. Default is chosen by model selection.
-#' @param rr A numeric vector specifying candidate range for model class, e.g., \code{seq(0, 2, by = 0.01)}.
-#' @param knots A numeric vector specifying knot locations for cubic splines, e.g., \code{seq(0, 2, by = 0.5)}.
+#' @param r1 Transformation tuning parameter for event time T1. Numeric. Default is chosen by model selection.
+#' @param r2 Transformation tuning parameter for event time T2. Numeric. Default is chosen by model selection.
+#' @param rr A numeric vector specifying the candidate range for the transformation tuning parameters \code{r1} and \code{r2}; e.g., \code{seq(0, 2, by = 0.01)}.
+#' @param knots A numeric vector specifying the internal knots for cubic splines; e.g., \code{seq(0, 2, by = 0.5)}.
 #' @param M A character string indicating transformation class: \code{"LT"} for logarithmic transformation, \code{"BCT"} for Box-Cox transformation. Default is \code{"LT"}.
 #' @param con A character string to specify confounder adjustment method: \code{"user"}, \code{"median"}, or \code{"mean"}. Default is \code{"median"}.
 #' @param level A numeric vector specifying specific levels for confounder adjustment. Default is \code{NULL}.
