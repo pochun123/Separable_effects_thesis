@@ -24,10 +24,10 @@
 #' \itemize{
 #'   \item \code{r1}: Selected transformation tuning parameter for T1.
 #'   \item \code{r2}: Selected transformation tuning parameter for T2.
-#'   \item \code{coef.B1}: Estimated coefficients for T1.
-#'   \item \code{coef.B2}: Estimated coefficients for T2.
-#'   \item \code{base.R1}: Estimated baseline function for T1.
-#'   \item \code{base.R2}: Estimated baseline function for T2.
+#'   \item \code{coef.B1}: Estimated regression coefficients for T1 under specified transformation model.
+#'   \item \code{coef.B2}: Estimated regression coefficients for T2 under specified transformation model.
+#'   \item \code{base.R1}: Estimated baseline function for T1 under specified transformation model.
+#'   \item \code{base.R2}: Estimated baseline function for T2 under specified transformation model.
 #'   \item \code{DE}: Estimated separable direct effects.
 #'   \item \code{IE}: Estimated separable indirect effects.
 #'   \item \code{DE.sd}: Standard deviation of \code{DE}.
