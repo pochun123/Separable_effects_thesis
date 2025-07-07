@@ -34,13 +34,13 @@ SepE(
 
 \item{B2}{Initial value for beta2. Numeric vector. Default is estimated from \code{coxph()}.}
 
-\item{r1}{Transformation class parameter for event time T1. Numeric. Default is chosen by model selection.}
+\item{r1}{Transformation tuning parameter for event time T1. Numeric. Default is chosen by model selection.}
 
-\item{r2}{Transformation class parameter for event time T2. Numeric. Default is chosen by model selection.}
+\item{r2}{Transformation tuning parameter for event time T2. Numeric. Default is chosen by model selection.}
 
-\item{rr}{A numeric vector specifying candidate range for model class, e.g., \code{seq(0, 2, by = 0.01)}.}
+\item{rr}{A numeric vector specifying the candidate range for the transformation tuning parameters \code{r1} and \code{r2}; e.g., \code{seq(0, 2, by = 0.01)}.}
 
-\item{knots}{A numeric vector specifying knot locations for cubic splines, e.g., \code{seq(0, 2, by = 0.5)}.}
+\item{knots}{A numeric vector specifying the internal knots for cubic splines; e.g., \code{seq(0, 2, by = 0.5)}.}
 
 \item{M}{A character string indicating transformation class: \code{"LT"} for logarithmic transformation, \code{"BCT"} for Box-Cox transformation. Default is \code{"LT"}.}
 
