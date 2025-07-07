@@ -256,7 +256,7 @@ SepE <- function(data, tt, B1 = NA, B2 = NA, r1 = NA, r2 = NA, rr = NA, knots = 
         }
 
 
-    if (bb1 < 0.0001 & bb2 < 0.0001){break}
+    if (bb1 < 0.00001 & bb2 < 0.00001){break}
     }
 
     R1  <- RR$Rhat1
